@@ -211,6 +211,12 @@ docker service ps {service name}
 
 #Remove a service
 docker service rm {service name}
+
+#Leave Swarm 
+docker swarm leave 
+
+#Leave swarm forcefully 
+docker swarm leave --force
 ```
 
 ## Acknowledgements 
