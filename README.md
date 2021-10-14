@@ -182,8 +182,6 @@ If the above doesn't work due to the current machining being a manager node. Use
 docker swarm leave --force
 ```
 
-## Tutorial - Running Swarm with Multiple Machines 
-
 ## Docker Swarm Commands Cheatsheet 
 
 ```
