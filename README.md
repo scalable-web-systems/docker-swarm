@@ -9,10 +9,23 @@ This tutorial is about docker swarm as the name suggests. The scope of this tuto
 
 ## About Container Orchestration 
 
+In a world of containers, managing them can often prove to be difficult in the context of scalability, distributed environments and having a lot of infrastructure. Docker swarm allows just for that. It allows for containers to run across several computing devices often virtual machines in the cloud. It is similar to kubernetes in the sense of its goal to orchestrate and manage containers. It often is far easier to setup and get started than kubernetes. Docker swarm has many goals, some of them include:
 
+- An easy way to scale applications across computing resources 
+- Offerring fault tolerance & reliablity 
+- Load Balancing requests 
+- Rolling Updates that allows the service to be up despite updates through replicas 
+- Easy to Learn 
+- Built natively into docker engine
 
 ## Prerequisites & Getting Started
 
+For this tutorial to work, you will need to have docker version 19.0 or above installed through docker for linux or desktop for mac or docker desktop for windows. Downloads to these can be found [here](https://docs.docker.com/get-docker/).
 
+## Basic Concepts 
+
+### Manager Nodes
+
+### Worker Nodes 
 
 
