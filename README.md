@@ -127,11 +127,15 @@ git clone https://github.com/abhinavtripathy/docker-swarm.git
 docker stack deploy -c sample.yml app
 ```
 
+Go to [localhost:3000](localhost:3000) to view the welcome page for nginx after running those commands. 
+
 In general the format to create a service in swarm from a docker-compose yaml file is:
 
 ```
 docker stack deploy -c {docker-compose file name} {docker compose app name}
 ```
+
+Docker stack is a command used to deploy a docker-compose file in a swarm environment. 
 
 ### Check running services
 
@@ -160,6 +164,14 @@ docker service ps {service name}
 Sample Output:
 ![](img/output_5.png)
 
+### Remove a service 
+
+```
+docker service rm {service name}
+```
+
+
+
 ## Tutorial - Running Swarm with Multiple Machines 
 
 ## Docker Swarm Commands Cheatsheet 
@@ -185,6 +197,12 @@ docker service scale {service name}={number of replicas}
 
 #Check for running services 
 docker service ls
+
+#View state of worker nodes
+docker service ps {service name}
+
+#Remove a service
+docker service rm {service name}
 ```
 
 ## Acknowledgements 
