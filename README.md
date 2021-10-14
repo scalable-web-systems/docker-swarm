@@ -21,6 +21,8 @@ In a world of containers, managing them can often prove to be difficult in the c
 - Easy to Learn 
 - Built natively into docker engine
 
+This tutorial does not expect you to have access to multiple computing resources hence it demonstrates use of swarm with one manager node that also acts as worker node in hope to show the concepts behind swarm. 
+
 ## Prerequisites & Getting Started
 
 For this tutorial to work, you will need to have docker version 19.0 or above installed through docker for linux or desktop for mac or docker desktop for windows. Downloads to these can be found [here](https://docs.docker.com/get-docker/).
