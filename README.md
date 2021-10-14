@@ -6,6 +6,9 @@
 
 This tutorial is about docker swarm as the name suggests. The scope of this tutorial is talk about the motivation behind docker swarm, how it works in brief and provide a quick guide to jump start on your local machine to see how it works.
 
+### Notes 
+
+{} - indicates a placeholder variable for a command
 
 ## About Container Orchestration 
 
@@ -66,7 +69,85 @@ The following is an image of a service which is nginx (a web server) having 3 re
 
 ![](https://docs.docker.com/engine/swarm/images/services-diagram.png)
 
+
+## Tutorial - Running Swarm Locally
+
+### Initializing docker swarm 
+
+```
+docker swarm init
+```
+
+Sample Output:
+![](img/output_1.png)
+
+This command initializes the swarm environment and makes the current device as a manager node. 
+
+### View information about the nodes in the swarm 
+
+```
+docker node ls
+```
+
+Sample Output:
+![](img/output_2.png)
+
+### Create a service 
+
+```
+docker service create --replicas {number of replicas} --name {service name} {image name}
+```
+
+Example: 
+
+```
+docker service create --replicas 1 --name helloworld nginx
+```
+
+We can also use a docker-compose file to define this: 
+
+Sample Yaml:
+```
+version: "3"
+services:
+  dataservice:
+    image: nginx:latest
+    deploy:
+      replicas: 3
+    ports:
+      - "3000:80"
+```
+
+The above yaml file defines a service: dataservice with 3 replicas and uses the latest nginx image while exposing the port 80 container to port 3000 of the host. 
+
+To run such an example application you can clone this repo, make a swarm from the prevous commands and create a service through the following commands:
+
+```
+git clone https://github.com/abhinavtripathy/docker-swarm.git
+docker stack deploy -c sample.yml app
+```
+
+In general the format to create a service in swarm from a docker-compose yaml file is:
+
+```
+docker stack deploy -c {docker-compose file name} {docker compose app name}
+```
+
+
+## Tutorial - Running Swarm with Multiple Machines 
+
+## Docker Swarm Commands Cheatsheet 
+
+```
+docker swarm init #initilizes swarm environment 
+docker info #check the current state of the swarm with container information
+docker node ls #view information of nodes in the swarm 
+docker service create --replicas {number of replicas} --name {service name} {image name} #Create a service with the CLI
+docker stack deploy -c {docker-compose file name} {docker compose app name} #Create a service with docker-compose file
+```
+
 ## Acknowledgements 
 
 - [Docker Swarm Guide](https://gabrieltanner.org/blog/docker-swarm)
+- [Official Docker Swarm Tutorial](https://docs.docker.com/engine/swarm/swarm-tutorial/)
 
