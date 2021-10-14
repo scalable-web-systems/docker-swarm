@@ -133,19 +133,38 @@ In general the format to create a service in swarm from a docker-compose yaml fi
 docker stack deploy -c {docker-compose file name} {docker compose app name}
 ```
 
+### Check running services
+
+```
+docker service ls 
+```
+
+Sample Output:
+![](img/output_3.png)
+
+### Scaling service
+
+```
+docker service scale {service name}={number of replicas}
+```
+
+Sample Output:
+![](img/output_4.png)
+
+### 
 
 ## Tutorial - Running Swarm with Multiple Machines 
 
 ## Docker Swarm Commands Cheatsheet 
 
 ```
-#initilizes swarm environment 
+#Initilizes swarm environment 
 docker swarm init 
 
-#check the current state of the swarm with container information
+#Check the current state of the swarm with container information
 docker info 
 
-#view information of nodes in the swarm 
+#View information of nodes in the swarm 
 docker node ls 
 
 #Create a service with the CLI
@@ -153,6 +172,12 @@ docker service create --replicas {number of replicas} --name {service name} {ima
 
 #Create a service with docker-compose file
 docker stack deploy -c {docker-compose file name} {docker compose app name} 
+
+#Scaling a service
+docker service scale {service name}={number of replicas}
+
+#Check for running services 
+docker service ls
 ```
 
 ## Acknowledgements 
