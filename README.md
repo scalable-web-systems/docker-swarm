@@ -26,6 +26,10 @@ For this tutorial to work, you will need to have docker version 19.0 or above in
 
 This section contains some of the key concepts part of docker swarm. 
 
+### A Node
+
+A node is used to indicate a physical computing resource in the context of docker swarm. A node often defines a single virtual machine running docker engine. 
+
 ### Manager Nodes
 
 Manager nodes distribute and schedule incoming tasks onto the Worker nodes, maintain the cluster state and perform orchestration and cluster management functions. Manager Nodes can also optionally run services for Worker nodes.
@@ -44,7 +48,23 @@ That is why Docker recommends you implement an odd number of nodes according to 
 
 ### Worker Nodes 
 
+Worker nodes are also instances of the Docker Engine whose sole purpose is to execute containers and services as instructed by the Manager Nodes.
+
 ### A service
+
+A service is the definition of the tasks to execute on the nodes. It is the primary root of user interaction with the swarm.
+
+When you create a service, you specify which container image to use and which commands to execute inside running containers. You also define other options for the service including:
+- the port you want to expose
+- CPU and memory limitations
+- the number of replicas of the image to run in the swarm
+- a rolling update policy
+
+These parameters can also be defined through a docker-compose yaml file and deployed into the swarm. 
+
+The following is an image of a service which is nginx (a web server) having 3 replicas being deployed on 3 nodes. 
+
+![](https://docs.docker.com/engine/swarm/images/services-diagram.png)
 
 ## Acknowledgements 
 
