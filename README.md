@@ -151,7 +151,14 @@ docker service scale {service name}={number of replicas}
 Sample Output:
 ![](img/output_4.png)
 
-### 
+### Viewing state of worker nodes 
+
+```
+docker service ps {service name}
+```
+
+Sample Output:
+![](img/output_5.png)
 
 ## Tutorial - Running Swarm with Multiple Machines 
 
