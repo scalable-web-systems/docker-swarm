@@ -170,7 +170,17 @@ Sample Output:
 docker service rm {service name}
 ```
 
+### Quick Swarm Mode 
 
+```
+docker swarm leave
+```
+
+If the above doesn't work due to the current machining being a manager node. Use the following commmand:
+
+```
+docker swarm leave --force
+```
 
 ## Tutorial - Running Swarm with Multiple Machines 
 
