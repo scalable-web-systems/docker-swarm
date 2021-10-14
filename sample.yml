@@ -1,0 +1,8 @@
+version: "3"
+services:
+  dataservice:
+    image: nginx:latest
+    deploy:
+      replicas: 3
+    ports:
+      - "3000:80"
