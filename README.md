@@ -24,8 +24,29 @@ For this tutorial to work, you will need to have docker version 19.0 or above in
 
 ## Basic Concepts 
 
+This section contains some of the key concepts part of docker swarm. 
+
 ### Manager Nodes
+
+Manager nodes distribute and schedule incoming tasks onto the Worker nodes, maintain the cluster state and perform orchestration and cluster management functions. Manager Nodes can also optionally run services for Worker nodes.
+
+Cluster management tasks include:
+- Maintaining the cluster state
+- Scheduling services
+- Serving swarm mode to HTTP API endpoints
+
+There should always be multiple manager nodes in your swarm because of the following reasons:
+
+- Maintaining high availability
+- Easily recover from a manager node failure without downtime
+
+That is why Docker recommends you implement an odd number of nodes according to your projects availability requirements.
 
 ### Worker Nodes 
 
+### A service
+
+## Acknowledgements 
+
+- [Docker Swarm Guide](https://gabrieltanner.org/blog/docker-swarm)
 
