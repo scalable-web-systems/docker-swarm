@@ -139,11 +139,20 @@ docker stack deploy -c {docker-compose file name} {docker compose app name}
 ## Docker Swarm Commands Cheatsheet 
 
 ```
-docker swarm init #initilizes swarm environment 
-docker info #check the current state of the swarm with container information
-docker node ls #view information of nodes in the swarm 
-docker service create --replicas {number of replicas} --name {service name} {image name} #Create a service with the CLI
-docker stack deploy -c {docker-compose file name} {docker compose app name} #Create a service with docker-compose file
+#initilizes swarm environment 
+docker swarm init 
+
+#check the current state of the swarm with container information
+docker info 
+
+#view information of nodes in the swarm 
+docker node ls 
+
+#Create a service with the CLI
+docker service create --replicas {number of replicas} --name {service name} {image name} 
+
+#Create a service with docker-compose file
+docker stack deploy -c {docker-compose file name} {docker compose app name} 
 ```
 
 ## Acknowledgements 
