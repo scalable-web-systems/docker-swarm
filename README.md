@@ -176,7 +176,7 @@ Sample Output:
 docker service rm {service name}
 ```
 
-### Quick Swarm Mode 
+### Quit Swarm Mode 
 
 ```
 docker swarm leave
