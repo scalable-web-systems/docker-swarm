@@ -21,7 +21,11 @@ In a world of containers, managing them can often prove to be difficult in the c
 - Easy to Learn 
 - Built natively into docker engine
 
+
+The larger goal of swarm and container orchestration is to make it easy for scalable applications to be built by using smarted technologies that manage and reduce overhead as developers to manage application infrastructure while mainting scalability and high throughput. 
+
 This tutorial does not expect you to have access to multiple computing resources hence it demonstrates use of swarm with one manager node that also acts as worker node in hope to show the concepts behind swarm. 
+
 
 ## Prerequisites & Getting Started
 
