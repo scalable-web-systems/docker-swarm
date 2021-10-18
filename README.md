@@ -31,6 +31,8 @@ This tutorial does not expect you to have access to multiple computing resources
 
 For this tutorial to work, you will need to have docker version 19.0 or above installed through docker for linux or desktop for mac or docker desktop for windows. Downloads to these can be found [here](https://docs.docker.com/get-docker/).
 
+In terms of knowledge, this tutorial assumes basic knowledge of docker, containers and docker-compose. 
+
 ## Basic Concepts 
 
 This section contains some of the key concepts part of docker swarm. 
