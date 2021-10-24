@@ -232,3 +232,6 @@ docker swarm leave --force
 - [Docker Swarm Guide](https://gabrieltanner.org/blog/docker-swarm)
 - [Official Docker Swarm Tutorial](https://docs.docker.com/engine/swarm/swarm-tutorial/)
 
+## See something to improve on this tutorial?
+
+If you see a bug, or gramatical errors or something to add, please do submit a [pull request](https://github.com/scalable-web-systems/docker-swarm/pulls)!
